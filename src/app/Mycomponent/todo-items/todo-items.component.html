@@ -1,0 +1,15 @@
+<div class="my-3 d-flex justify-content-center align-items-center flex-column">
+    <div class="px-5 py-5 border border-primary">
+      <h4 [ngClass]="{'strike' : !todo.active}"> Title - {{todo.title}}</h4>
+<p [ngClass]="{'strike' : !todo.active}">{{todo.description}}</p>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked{{i}}" (click)="onCheckboxClick(todo)" [checked]="!todo.active">
+    <label class="form-check-label mb-4" for="flexCheckChecked{{i}}">
+      Task Completed
+    </label>
+  </div> 
+<button class="btn btn-danger" (click)="clickFunc(todo)">
+    Delete
+</button>
+    </div>
+</div>
